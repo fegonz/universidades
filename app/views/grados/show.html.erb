@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @grado.nombre %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @grado.url %>
+</p>
+
+<p>
+  <strong>Universidad:</strong>
+  <%= @grado.universidad_id %>
+</p>
+
+<%= link_to 'Edit', edit_grado_path(@grado) %> |
+<%= link_to 'Back', grados_path %>
