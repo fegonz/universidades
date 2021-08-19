@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header">
+    <div class="fa fa-book"></div>
+    <%= universidad.nombre %>
+  </div>
+  <div class="card-body">
+  <div class="far fa-chalkboard-teacher"></div>
+    <a href="<%= universidad.url %>"><%= universidad.url %></a>
+    
+  </div>
+  <div class="card-footer">
+    
+    <div class="row"></div>
+    <div class="fas fa-dollar-sign"></div>
+    <%= universidad.tipo%>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Show', universidad, class: 'btn btn-outline-primary' %>
+    <%= link_to 'Edit', edit_universidad_path(universidad), class: 'btn btn-outline-warning' %>
+    <%= link_to 'Destroy', universidad, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger' %>
+    <%= link_to 'Scrapping', universidad, class: 'btn btn-outline-success' %>
+  </div>
+</div>
