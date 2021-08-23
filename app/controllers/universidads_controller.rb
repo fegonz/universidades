@@ -11,6 +11,36 @@ class UniversidadsController < ApplicationController
   def show
   end
 
+  def scrape
+    universidad= Universidad.find(params[:idUniversidad])
+    nombre_universidad= universidad.nombre
+    url = universidad.url 
+    case nombre_universidad
+    when "Universidad Carlos III de Madrid"
+      response = Uc3mSpider.process(url,universidad)
+  
+    when "Universidad Alfonso X el Sabio"
+      response = UaxSpider.process(url,universidad)
+    when "Universidad de Alcalá"
+      response = UahSpider.process(url,universidad)
+
+    when "Universidad Nebrija"
+      response = UnebrijaSpider.process(url,universidad)
+    when "Universidad Camilo José Cela"
+      response = UcamilojcSpider.process(url,universidad)
+    when "Universidad CEU San Pablo"
+      response = UceuSpider.process(url,universidad)
+    when "Universidad Europea de Madrid"
+      response = UemSpider.process(url,universidad)
+    when "Universidad Juan Carlos I"
+      response = UrjcSpider.process(url,universidad)
+
+    end
+
+
+  end
+  
+
   # GET /universidads/new
   def new
     @universidad = Universidad.new
