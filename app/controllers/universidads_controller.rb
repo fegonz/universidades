@@ -9,6 +9,7 @@ class UniversidadsController < ApplicationController
 
   # GET /universidads/1 or /universidads/1.json
   def show
+    
   end
 
   def scrape

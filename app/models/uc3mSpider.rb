@@ -24,9 +24,9 @@ end
 
 def parse_url(urlGrado,grado,data2)
 
-    zanzo = `curl --user-agent "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)" #{urlGrado}`
+  zanzo = `curl --user-agent "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)" #{urlGrado}`
 
- response2 = Nokogiri::HTML(zanzo)
+  response2 = Nokogiri::HTML(zanzo)
   
   nombre =response2.xpath("//div[@class='contTitulo row']")
   nombre_grado = nombre.css("h1/text()")
@@ -72,7 +72,7 @@ def parse_url(urlGrado,grado,data2)
 
                   end
                   item2[:grado]=grado
-                   asignatura=Asignatura.where(item2).create!
+                  Asignatura.createAsignatura(item2)
                   
 
                    
