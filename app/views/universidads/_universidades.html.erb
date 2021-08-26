@@ -18,6 +18,6 @@
     <%= link_to 'Show', universidad, class: 'btn btn-outline-primary' %>
     <%= link_to 'Edit', edit_universidad_path(universidad), class: 'btn btn-outline-warning' %>
     <%= link_to 'Destroy', universidad, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger' %>
-    <%= link_to 'Scrapping', universidad, class: 'btn btn-outline-success' %>
+    <td><%= link_to 'Scrape', universidads_scrape_path(universidad.id), class: 'btn btn-outline-success'  %></td>
   </div>
 </div>

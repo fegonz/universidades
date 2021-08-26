@@ -9,6 +9,7 @@
       <th>Tipo</th>
       <th>Creditos</th>
       <th>Grado</th>
+      <th>Universidad</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +20,8 @@
         <td><%= asignatura.nombre %></td>
         <td><%= asignatura.tipo %></td>
         <td><%= asignatura.creditos %></td>
-        <td><%= asignatura.grado_id %></td>
+        <td><%= asignatura.grado.nombre %></td>
+        <td><%= asignatura.grado.universidad.nombre %></td>
         <td><%= link_to 'Show', asignatura %></td>
         <td><%= link_to 'Edit', edit_asignatura_path(asignatura) %></td>
         <td><%= link_to 'Destroy', asignatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>

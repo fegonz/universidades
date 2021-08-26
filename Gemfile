@@ -25,6 +25,8 @@ gem 'bootstrap', '~> 5.1.0'
 gem 'jquery-rails'
 gem 'simple_form', '~> 5.1'
 gem 'devise', '~> 4.2'
+gem 'kimurai', '~> 1.2'
+gem 'thinking-sphinx', '~> 5.3'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
